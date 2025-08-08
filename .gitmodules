@@ -1,0 +1,3 @@
+[submodule "squaregame-src"]
+	path = squaregame-src
+	url = https://github.com/Wdboyes13/mygame

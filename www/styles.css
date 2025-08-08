@@ -16,6 +16,9 @@ html, body {
     padding: 2rem;
     box-sizing: border-box;
     text-align: center;
+    background-color: #202020 !important;
+    color: #fff !important;
+    --md-sys-color-background: #2020202;
 }
 .SpotifyContainer {
     flex: none;
