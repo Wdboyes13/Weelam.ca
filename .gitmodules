@@ -1,3 +1,6 @@
 [submodule "squaregame-src"]
 	path = squaregame-src
 	url = https://github.com/Wdboyes13/mygame
+[submodule "minecraft-src"]
+	path = minecraft-src
+	url = https://github.com/Wdboyes13/minecraft.weelam.ca
