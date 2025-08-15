@@ -13,6 +13,15 @@ app.use((req, res, next) => {
   next();
 });
 
+app.get('/github/profile', (req, res) => {
+  res.redirect('https://github.com/Wdboyes13/');
+});
+
+app.get('/github/:repo', (req, res) => {
+  const repo = req.params.repo;
+  res.redirect(`https://github.com/Wdboyes13/${repo}`);
+});
+
 app.get('/secret/', (req, res) => {
   res.redirect('https://youtu.be/dQw4w9WgXcQ');
 });
