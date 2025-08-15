@@ -16,5 +16,5 @@
 - william@mail.weelam.ca - iCloud+ Mail  
 ## Administration  
 - Hosting - Raspberry Pi 5, 8GB RAM, 32GB MicroSD
-- DNS - Cloudflare
+- DNS/Security/Tunneling - Cloudflare
 - Domain Registrar - Web Hosting Canada
