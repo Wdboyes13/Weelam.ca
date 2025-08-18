@@ -1,0 +1,17 @@
+Any and all source code and assets under the directories/files listed next, are licensed under The GNU General Public License v3  
+- www/
+- docs/
+- dev-wordle/
+- gamecenter/
+- KeyDl/
+- package.json
+- server.js
+
+The only exceptions to this are  
+- www/fsfmem-6986047.png - Which is owned by the Free Software Foundation, under No License  
+- www/anarchom.png - Which was gathered from https://freesvg.org/anarcho-communist-flag-with-logo and is licensed under the Public Domain
+- www/gplv3-or-later.png - Which was gathered from https://www.gnu.org/graphics/license-logos.html and is licensed under the Public Domain
+
+Any unmentioned assets, are distributed under the licenses contained under their location
+
+The GNU General Public License v3, can be located at either https://weelam.ca/license/index.html OR https://www.gnu.org/licenses/gpl.html
