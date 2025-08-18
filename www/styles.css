@@ -22,6 +22,9 @@ html, body {
 }
 .SpotifyContainer {
     flex: none;
+    border-radius:12px; 
+    width:100%; 
+    max-width:800px;
 }
 md-elevated-button.small {
     --md-elevated-button-min-height: 24px;  /* shrink height */
@@ -43,4 +46,19 @@ md-elevated-button.small {
     flex-direction: column;
     gap: 1rem;
     overflow-wrap: break-word;
+}
+
+.BadgeContainer {
+    display:flex; 
+    align-items:center; 
+    gap:10px; 
+    justify-content:center;
+}
+
+.AnFlag {
+    width:10%;
+}
+
+.Wave {
+    font-size: 48px;
 }
