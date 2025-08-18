@@ -5,7 +5,7 @@ const helmet = require("helmet");
 
 const app = express();
 
-// Rdirect HTTP to HTTPS
+// Redirect HTTP to HTTPS
 app.use((req, res, next) => {
   // If the request is not secure, redirect to HTTPS
   if (!req.secure && req.get("x-forwarded-proto") !== "https") {
