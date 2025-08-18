@@ -29,14 +29,18 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],               // only your domain by default
-      scriptSrc: ["'self'", "https://esm.run"], // allow your domain + esm.run
-      styleSrc: ["'self'", "https://fonts.googleapis.com"], // allow inline styles if needed
-      imgSrc: ["'self'", "data:"],         // allow local images + base64
+      scriptSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", 
+                  "'sha256-wPUDoRzchcyzaGBR7iZS7TvSZYsrS1ZAJ2++Nvkw4K8='", "https://static.cloudflareinsights.com",
+                  "'sha256-PRh/fvLCFBNVoIAGULuMBLuPh7G0pBe3UpLsY8yvX0A='", "'sha256-uIYdeLqA7cua9DBixxbxilexD6Ljb+CYb0mDD2uuVTw='",
+                "https://cdn.jsdelivr.net"], // allow your domain + esm.run
+      styleSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow inline styles if needed
+      imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"],         // allow local images + base64
       connectSrc: ["'self'"],              // AJAX/WebSocket requests
-      fontSrc: ["'self'"],                 // font loading
-      objectSrc: ["'none'"],               // block <object>, <embed>
+      fontSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", "https://fonts.gstatic.com"],                 // font loading
+      objectSrc: ["'none'", "https://esm.run", "https://fonts.googleapis.com"],               // block <object>, <embed>
       frameAncestors: ["'self'", "https://open.spotify.com"],          // XFO replacement for modern browsers
       defaultSrc: ["'none'"],
+      frameSrc: ["https://open.spotify.com"]
     },
   })
 );
