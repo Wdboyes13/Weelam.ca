@@ -31,12 +31,15 @@ app.use(
       defaultSrc: ["'self'"],               // only your domain by default
       scriptSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", 
                   "https://static.cloudflareinsights.com", "https://cdn.jsdelivr.net"], // allow your domain + esm.run + other
+
       styleSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow inline styles if needed + googlefonts + esmrun
-      imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"],         // allow local images + base64 + googlefonts + esmrun
+      imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow local images + base64 + googlefonts + esmrun
       connectSrc: ["'self'"],              // AJAX/WebSocket requests
+
       fontSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", "https://fonts.gstatic.com"], // font loading
       objectSrc: ["'none'", "https://esm.run", "https://fonts.googleapis.com"], // block <object>, <embed>
       frameAncestors: ["'self'", "https://open.spotify.com"], // XFO replacement for modern browsers
+      
       defaultSrc: ["'none'"],
       frameSrc: ["https://open.spotify.com"]
     },
@@ -60,7 +63,7 @@ app.get('/secret/', (req, res) => {
   res.redirect('https://youtu.be/dQw4w9WgXcQ');
 });
 
-const staticPath = path.join(__dirname, 'www'); // Your static folder
+const staticPath = path.join(__dirname, 'www'); // Static folder
 
 app.use(serveStatic(staticPath));
 
