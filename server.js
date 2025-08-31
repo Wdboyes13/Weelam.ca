@@ -42,7 +42,8 @@ app.use(
       frameAncestors: ["'self'", "https://open.spotify.com"], // XFO replacement for modern browsers
       
       defaultSrc: ["'none'"],
-      frameSrc: ["https://open.spotify.com"]
+      frameSrc: ["https://open.spotify.com"],
+      mediaSrc: ["https://weelam.ca"]
     },
   })
 );
