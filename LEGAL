@@ -1,3 +1,7 @@
+Table of Contents:
+- Licensing - Lines 5-97
+- Privacy Policy - Lines 100-121
+
 Except otherwise noted, any and all source code and assets under the directories/files listed next, are licensed under The GNU General Public License v3 or Later.
 - www/
 - docs/
@@ -16,20 +20,24 @@ The only exceptions to this are
 - www/games - See below (React JavaScript)  
 - www/assets/bgm.wav - See below (Airport Lounge - Kevin Mcleod)
 
-This website is not affiliated nor endorsed by Meta Platforms Inc. and its affiliates and authors.
-This website is not affiliated nor endorsed by PixiJS and its affiliates and authors.
-This website is not affiliated nor endorsed by Incompetech Inc. and its affiliates and authors.
-This website is not affiliated nor endorsed by Three.js and its affiliates and authors.  
+This website is neither affiliated with nor endorsed by Meta Platforms Inc. and its affiliates and authors.
+This website is neither affiliated with nor endorsed by PixiJS and its affiliates and authors.
+This website is neither affiliated with nor endorsed by Incompetech Inc. and its affiliates and authors.
+This website is neither affiliated with nor endorsed by Three.js and its affiliates and authors.  
+This website is neither affiliated with nor endorsed by Cloudflare Inc. and its affiliates and authors.
+This website is neither affiliated with nor endorsed by any website re-directed to, off of weelam.ca.
 
-React JavaScript is licensed under the MIT License available from lines 25-45. Under this copyright is any and all code under www/
-PixiJS is licensed under the MIT License available from lines 50-70.
-Airport Lounge by Kevin McLeod is licensed under Creative Commons: By Attribution 3.0 License available at http://creativecommons.org/licenses/by/3.0/  more information can be found at lines 85-87
+
+React JavaScript is licensed under the MIT License available from lines 45-65. Under this copyright is any and all code under www/
+PixiJS is licensed under the MIT License available from lines 70-90.
+Airport Lounge by Kevin McLeod is licensed under Creative Commons: By Attribution 3.0 License available at http://creativecommons.org/licenses/by/3.0/  more information can be found at lines 95-97
 
 
 
 Any unmentioned source code / assets, are distributed under the licenses contained under their location.
 
 The GNU General Public License v3, can be located at either https://weelam.ca/license/index.html OR https://www.gnu.org/licenses/gpl.html
+
 
 
 
@@ -55,6 +63,8 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
 
 
 The MIT License
@@ -85,3 +95,27 @@ THE SOFTWARE.
 Airport Lounge Kevin MacLeod (incompetech.com)  
 Licensed under Creative Commons: By Attribution 3.0 License  
 http://creativecommons.org/licenses/by/3.0/ 
+
+
+Privacy Information
+
+weelam.ca, and any sub-domains of it (together, the "website") do not collect any user data, except for that outlined by this following document.
+All re-directs to services not part of the wesite are neither with unaffiliated nor endorsed by the website, and are governed by the Privacy Policy of that website
+All parts of weelam.ca use CloudFlare Analytics. CloudFlare Analytics anonymously shares the following data with the owner:
+- Content Type Requested (JSON, JavaScript, HTML, etc.)
+- SSL Protocol Type (TLSv1.3, TLSv1.2, etc.)
+- What errors you encountered during your visit and the number of them  
+- Which requests where served through cached data
+- The amount of encrypted requests, and encrypted bandwidth during your visit
+- The amount of bandwidth used during your visit
+- The country your request originated from
+- If you have visited the website(s) before
+- Your Internet Protocol (IP) Address (We do not use this to personally identify users, and is only reviewed in the event of a potential attack)
+
+The collected data is used for the following purposes
+- Monitoring potential DDoS/DoS attacks
+- Monitoring any potential bugs/broken parts on the website
+- Monitoring website success  
+
+For details on how CloudFlare handles analytics data please take the time to review their own Privacy Policy at https://www.cloudflare.com/privacypolicy/
+To share any concerns with user privacy/safety please contact me at william@mail.weelam.ca  
