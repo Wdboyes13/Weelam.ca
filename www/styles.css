@@ -55,10 +55,19 @@ md-elevated-button.small {
     justify-content:center;
 }
 
-.AnFlag {
-    width:10%;
+.BadgeContainer img {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.BadgeContainer a {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    line-height: 0; 
 }
 
 .Wave {
-    font-size: 48px;
+    font-size: 60px;
 }

@@ -30,10 +30,11 @@ app.use(
     directives: {
       defaultSrc: ["'self'"],               // only your domain by default
       scriptSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", 
-                  "https://static.cloudflareinsights.com", "https://cdn.jsdelivr.net"], // allow your domain + esm.run + other
+                  "https://static.cloudflareinsights.com", "https://cdn.jsdelivr.net", "'sha256-uIYdeLqA7cua9DBixxbxilexD6Ljb+CYb0mDD2uuVTw='",
+                  "'sha256-TiMeLUJo+b3J9VzPZa5GKAvf2hJA0EM9ZkFifCEOJqk='"], // allow your domain + esm.run + other
 
       styleSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow inline styles if needed + googlefonts + esmrun
-      imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow local images + base64 + googlefonts + esmrun
+      imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com", "https://img.pagecloud.com"], // allow local images + base64 + googlefonts + esmrun
       connectSrc: ["'self'"],              // AJAX/WebSocket requests
 
       fontSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", "https://fonts.gstatic.com"], // font loading
