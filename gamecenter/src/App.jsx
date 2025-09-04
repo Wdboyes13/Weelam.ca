@@ -5,10 +5,11 @@ function App() {
 
   return (
     <>
-      <h1>My Games!</h1>
+      <h1>My Tools & Games!</h1>
       <div className="card-container">
         <ACard Title="Square Game" Description="Be a square & Get chased by squares" Link="https://weelam.ca/squaregame" />
         <ACard Title="DevWordle" Description="Like Wordle, but for nerds" Link="devwordle.weelam.ca" />
+        <ACard Title="Currency Converter" Description="A completely FOSS currency converter" Link="/cconv" />
       </div>
     </>
   )

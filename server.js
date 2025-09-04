@@ -5,6 +5,9 @@ const helmet = require("helmet");
 
 const app = express();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 // Redirect HTTP to HTTPS
 app.use((req, res, next) => {
   // If the request is not secure, redirect to HTTPS
@@ -29,9 +32,12 @@ app.use(
   helmet.contentSecurityPolicy({
     directives: {
       defaultSrc: ["'self'"],               // only your domain by default
-      scriptSrc: ["'self'", "https://esm.run", "https://fonts.googleapis.com", 
-                  "https://static.cloudflareinsights.com", "https://cdn.jsdelivr.net", "'sha256-uIYdeLqA7cua9DBixxbxilexD6Ljb+CYb0mDD2uuVTw='",
-                  "'sha256-TiMeLUJo+b3J9VzPZa5GKAvf2hJA0EM9ZkFifCEOJqk='"], // allow your domain + esm.run + other
+      scriptSrc: ["'self'", 
+                  "https://esm.run",  
+                  "https://fonts.googleapis.com", 
+                  "https://static.cloudflareinsights.com", 
+                  "https://cdn.jsdelivr.net", 
+                  "'unsafe-inline'"], // Although its bad practice, unsafe inline is required for dynamic scripts
 
       styleSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com"], // allow inline styles if needed + googlefonts + esmrun
       imgSrc: ["'self'","https://esm.run", "https://fonts.googleapis.com", "https://img.pagecloud.com"], // allow local images + base64 + googlefonts + esmrun
@@ -63,6 +69,26 @@ app.get('/github/:repo', (req, res) => {
 
 app.get('/secret/', (req, res) => {
   res.redirect('https://youtu.be/dQw4w9WgXcQ');
+});
+
+
+app.post("/cconv/convert", async (req, res) => {
+  const { from, to, amnt } = req.body;
+  const amount = parseFloat(amnt);
+
+  const response = await fetch(`https://api.frankfurter.dev/v1/latest?base=${from}&symbols=${to}`);
+  const data = await response.json();
+  const converted = (amount * data.rates[to]).toFixed(2);
+
+  res.setHeader('Content-Type', 'text/html');
+  res.send(`
+        <!DOCTYPE html><html><head><title>Result</title></head><body><script>
+            document.addEventListener("DOMContentLoaded", () => {
+              alert(\"${amount} ${from} is ${converted} ${to}\");
+              window.location.href=\"/cconv\"
+            });
+        </script></body></html>
+    `)
 });
 
 const staticPath = path.join(__dirname, 'www'); // Static folder

@@ -20,6 +20,21 @@ html, body {
     color: #fff !important;
     --md-sys-color-background: #2020202;
 }
+
+.center-container2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #202020 !important;
+    color: #fff !important;
+    --md-sys-color-background: #2020202;
+}
+
 .SpotifyContainer {
     flex: none;
     border-radius:12px; 
@@ -70,4 +85,13 @@ md-elevated-button.small {
 
 .Wave {
     font-size: 60px;
+}
+
+.convform {
+  padding-bottom: 30%;
+  display: flex;
+  flex-direction: column; /* stack children vertically */
+  gap: 10px;              /* space between each input */
+  align-items: stretch;   /* make fields full width */
+  max-width: 300px;       /* optional: keep it from stretching too wide */
 }
