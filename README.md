@@ -5,6 +5,6 @@ Code for https://devwordle.weelam.ca is in dev-wordle/
 Code for https://minecraft.weelam.ca is in minecraft-src/  
 Code for https://weelam.ca/dlkeys is in KeyDl/  
 
-__PLEASE SEE THE [LICENSE](/LICENSE) FILE FOR LICENSING / COPYRIGHT INFORMATION__
+__PLEASE SEE THE [LEGAL](/LEGAL) FILE FOR LICENSING / COPYRIGHT INFORMATION AS WELL AS PRIVACY POLICY__
 
 
