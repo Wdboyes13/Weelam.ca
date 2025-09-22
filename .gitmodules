@@ -4,3 +4,6 @@
 [submodule "minecraft-src"]
 	path = minecraft-src
 	url = https://github.com/Wdboyes13/minecraft.weelam.ca
+[submodule "skls/skills/themes/PaperMod"]
+	path = skls/skills/themes/PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod
