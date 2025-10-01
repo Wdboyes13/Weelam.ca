@@ -1,6 +1,5 @@
-.center-container > * + * {
-    margin-top: 1rem;
-}
+.center-container > * + * { margin-top: 1rem; }
+
 html, body {
     height: 100%;
     margin: 0;
@@ -74,6 +73,7 @@ md-elevated-button.small {
     height: 40px;
     width: auto;
     display: block;
+    border-radius: 10px;
 }
 
 .BadgeContainer a {
@@ -83,15 +83,18 @@ md-elevated-button.small {
     line-height: 0; 
 }
 
-.Wave {
-    font-size: 60px;
-}
+.Wave { font-size: 60px; }
 
 .convform {
   padding-bottom: 30%;
   display: flex;
-  flex-direction: column; /* stack children vertically */
-  gap: 10px;              /* space between each input */
-  align-items: stretch;   /* make fields full width */
-  max-width: 300px;       /* optional: keep it from stretching too wide */
+  flex-direction: column;
+  gap: 10px;
+  align-items: stretch;
+  max-width: 300px;
+}
+
+.money-addrs {
+    padding: 0;
+    margin: 0;
 }

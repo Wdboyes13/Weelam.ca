@@ -1,0 +1,8 @@
+<svg width="280" height="80" xmlns="http://www.w3.org/2000/svg">
+    <rect width="280" height="13.3" x="0" y="0" fill="red" />
+    <rect width="280" height="13.3" x="0" y="13.3" fill="orange" />
+    <rect width="280" height="13.3" x="0" y="26.6" fill="yellow" />
+    <rect width="280" height="13.3" x="0" y="38.8" fill="green" />
+    <rect width="280" height="13.3" x="0" y="52.1" fill="blue" />
+    <rect width="280" height="14.3" x="0" y="65.4" fill="purple" />
+</svg>
