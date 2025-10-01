@@ -20,6 +20,22 @@ fun Application.configureHTTP() {
         header("X-Frame-Options", "SAMEORIGIN")
         header("Referrer-Policy", "strict-origin-when-cross-origin")
         header("X-SuperSecret", "https://youtu.be/dQw4w9WgXcQ")
+	header(
+            "Content-Security-Policy",
+            buildCSP {
+                defaultSrc("'self'")
+                scriptSrc("'self'", "https://esm.run", "https://fonts.googleapis.com",
+                          "https://static.cloudflareinsights.com", "https://cdn.jsdelivr.net", "'unsafe-inline'")
+                styleSrc("'self'", "https://esm.run", "https://fonts.googleapis.com")
+                imgSrc("'self'", "https://esm.run", "https://fonts.googleapis.com", "https://img.pagecloud.com")
+                connectSrc("'self'")
+                fontSrc("'self'", "https://esm.run", "https://fonts.googleapis.com", "https://fonts.gstatic.com")
+                objectSrc("'none'", "https://esm.run", "https://fonts.googleapis.com")
+                frameAncestors("'self'", "https://open.spotify.com")
+                frameSrc("https://open.spotify.com")
+                mediaSrc("https://weelam.ca")
+            }
+        )
     }
     install(CORS) {
         allowMethod(HttpMethod.Options)

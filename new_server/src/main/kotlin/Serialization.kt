@@ -24,8 +24,9 @@ import ca.weelam.ConvertRequest
 @Serializable
 data class ConvertRequest(val from: String, val to: String, val amnt: String)
 
+private val client = HttpClient(CIO)
+
 fun Application.configureSerialization() {
-    val client = HttpClient(CIO)
     install(ContentNegotiation) {
         json()
     }
@@ -35,10 +36,8 @@ fun Application.configureSerialization() {
             val amount = req.amnt.toDouble()
             
             val apiResponse: String = client.get("https://api.frankfurter.dev/v1/latest") { 
-                url {
-                    parameters.append("base", req.from)
-                    parameters.append("symbols", req.to)
-                }
+                    parameter("base", req.from)
+                    parameter("symbols", req.to)
             }.body()
 
             val json = Json.parseToJsonElement(apiResponse).jsonObject
