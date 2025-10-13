@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audiplayer</title>
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css">
+    <link rel="stylesheet" href="https://newcss.net/theme/terminal.css">
+
+    <style>
+        body {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>AudiPlayer Source Building</h1>
+    <h3>Requirements</h3>
+    <ul>
+        <li><a href="https://www.qt.io/product/framework">Qt5</a></li>
+        <li><a href="https://discord.com/developers/social-sdk">Discord Social SDK</a> (optional)<sup>1</sup></li>
+        <li><a href="https://taglib.org">Taglib</a></li>
+        <li><a href="https://cmake.org/">CMake</a></li>
+        <li><a href="https://git-scm.com/">Git VCS</a></li>
+        <li>A C++ compiler (installed on most systems, prefferably Clang or GCC)</li>
+    </ul>
+
+    <h3>How to build</h3>
+    <ol>
+        <li>
+            Clone the repo <code>git clone --depth 1 https://github.com/Wdboyes13/Audiplayer.git</code>
+        </li>
+        <li>
+            Change into the repo <code>cd Audiplayer</code>
+        </li>
+        <li>
+            If you are buiding with discord, download and extract the Discord Social SDK into lib/discord_social_sdk
+        </li>
+        <li>
+            Run CMake Configure <code>cmake -B build</code>
+        </li>
+        <li>
+            Run CMake Build <code>cmake --build build</code> <br \>
+            If you are building without discord, also add <code>-DNODISCORD</code>
+        </li>
+        <li>
+            Install with CMake <code>cmake --install build</code>
+        </li>
+        <li>
+            Audiplayer is now installed!
+        </li>
+    </ol>
+
+    <h3>Notes</h3>
+    <ol>
+        <li> <!--Note 1-->
+            The Discord Social SDK is optional because it needs to be requested directly from Discord
+        </li>
+    </ol>
+</body>
+</html>

@@ -2,15 +2,7 @@ Table of Contents:
 - Licensing - Lines 5-97
 - Privacy Policy - Lines 100-121
 
-Except otherwise noted, any and all source code and assets under the directories/files listed next, are licensed under The GNU General Public License v3 or Later, Copyright (c) 2025 Wdboyes13.
-- www/
-- docs/
-- dev-wordle/
-- gamecenter/
-- KeyDl/
-- package.json
-- server.js
-
+Except otherwise noted, any and all source code and assets are licensed under The GNU General Public License v3 or Later, Copyright (c) 2025 Wdboyes13.
 The only exceptions to this are  
 - www/fsfmem-6986047.png - Which is owned by the Free Software Foundation, under No License  
 - www/anarchom.png - Which was gathered from https://freesvg.org/anarcho-communist-flag-with-logo and is licensed under the Public Domain
