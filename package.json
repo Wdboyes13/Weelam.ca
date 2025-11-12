@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "express": "^5.1.0",
-    "helmet": "^8.1.0",
-    "serve-static": "^2.2.0"
-  }
-}
