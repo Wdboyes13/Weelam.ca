@@ -1,105 +1,216 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:image" content="https://weelam.ca/icons/thumbnail.png">
-    <meta property="og:title" content="William's Site">
-    <meta property="og:description" content="Some stuff about me :D">
-    <meta property="og:url" content="https://weelam.ca">
-    <meta property="og:type" content="website">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            property="og:image"
+            content="https://weelam.ca/icons/thumbnail.png"
+        />
+        <meta property="og:title" content="William's Site" />
+        <meta property="og:description" content="Some stuff about me :D" />
+        <meta property="og:url" content="https://weelam.ca" />
+        <meta property="og:type" content="website" />
 
-    <title>William's Site :D</title>
+        <title>William's Site :D</title>
 
-    <script type="importmap">
-        {
-        "imports": {
-            "@material/web/": "https://esm.run/@material/web/"
-        }
-        }
-    </script>
-    <script type="module" src="/styles.js"></script>
+        <script type="importmap">
+            {
+                "imports": {
+                    "@material/web/": "https://esm.run/@material/web/"
+                }
+            }
+        </script>
+        <script type="module" src="/styles.js"></script>
 
-    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0,0" />
-    <link rel="stylesheet" href="/styles.css">
+        <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20,400,0,0"
+        />
+        <link rel="stylesheet" href="/styles.css" />
+    </head>
+    <body>
+        <noscript>
+            <h1>This website uses Material UI, which relies on JavaScript</h1>
+            <h1>Please enable JavaScript to continue</h1>
+        </noscript>
+        <div class="center-container">
+            <h1
+                class="md-typescale-display-medium"
+                aria-label="Main header for website with a waving hand icon and the text Hey, I'm William"
+            >
+                Hey, I'm William!
+                <span
+                    id="wave"
+                    class="material-symbols-rounded icon-inline"
+                    class="Wave"
+                    >waving_hand</span
+                >
+            </h1>
 
-</head>
-<body>
-    <noscript>
-        <h1>This website uses Material UI, which relies on JavaScript</h1>
-        <h1>Please enable JavaScript to continue</h1>
-    </noscript>
-    <div class="center-container">
-        <h1 class="md-typescale-display-medium" aria-label="Main header for website with a waving hand icon and the text Hey, I'm William">Hey, I'm William!
-            <span id="wave" class="material-symbols-rounded icon-inline" class="Wave">waving_hand</span>
-        </h1>
-        
-        <md-elevated-button type="button" href="/sphore/index.html" aria-label="A button to access a page with a rotating sphere animation">Here take a sphere!</md-elevated-button>
-        <md-elevated-button type="button" href="/games/index.html" aria-label="A button to access a game laucher containing games and tools I made">Some games & tools!</md-elevated-button>
-        <md-elevated-button type="button" 
-            href="https://github.com/Wdboyes13" aria-label="Button to access my GitHub with a Code Blocks icon">Heres my GitHub! <span 
-                class="material-symbols-rounded icon-inline">code_blocks</span></md-elevated-button>
+            <md-elevated-button
+                type="button"
+                href="/sphore/index.html"
+                aria-label="A button to access a page with a rotating sphere animation"
+                >Here take a sphere!</md-elevated-button
+            >
+            <md-elevated-button
+                type="button"
+                href="/games/index.html"
+                aria-label="A button to access a game laucher containing games and tools I made"
+                >Some games & tools!</md-elevated-button
+            >
 
-        <md-elevated-button type="button" 
-            href="https://scoresaber.com/u/76561199128989009" aria-label="Button to access my ScoreSaber with a Swords icon">My ScoreSaber <span 
-                class="material-symbols-rounded icon-inline">swords</span></md-elevated-button>
+            <md-elevated-button
+                type="button"
+                href="https://scoresaber.com/u/76561199128989009"
+                aria-label="Button to access my ScoreSaber with a Swords icon"
+                >My ScoreSaber
+                <span class="material-symbols-rounded icon-inline"
+                    >swords</span
+                ></md-elevated-button
+            >
 
-        <br /><br />
+            <a href="https://github.com/Wdboyes13">
+                <img
+                    src="https://github-readme-stats.vercel.app/api?username=wdboyes13&show_icons=true&theme=radical&hide_rank=true"
+                />
+            </a>
 
-        <h3 class="md-typescale-display-small" aria-label="Header for projects container with the text Heres some of my current projects">Heres some of my current projects!</h3>
-        <div id="projects">
-            <md-filled-tonal-button type="button" 
-                href="https://github.com/Wdboyes13/cxx_extensions">cxx_extensions<br>A set of C++ extensions I made</md-filled-tonal-button>
+            <br /><br />
 
-            <md-filled-tonal-button type="button" 
-                href="https://github.com/Wdboyes13/GLImage">GLImage <br>A image viewer using OpenGL in C++</md-filled-tonal-button>
+            <h3
+                class="md-typescale-display-small"
+                aria-label="Header for projects container with the text Heres some of my current projects"
+            >
+                Heres some of my current projects!
+            </h3>
+            <div id="projects"></div>
 
-            <md-filled-tonal-button type="button" 
-                href="https://github.com/Wdboyes13/mlw">wcpu<br>A programming language based on Rust & built on LLVM & ANTLR4</md-filled-tonal-button>
+            <script>
+                async function loadPins() {
+                    try {
+                        const response = await fetch("/pins");
+                        const html = await response.text();
+                        document.getElementById("projects").innerHTML = html;
+                    } catch (error) {
+                        console.error("Failed to load pins:", error);
+                        document.getElementById("projects").innerHTML =
+                            "<p>Failed to load projects</p>";
+                    }
+                }
+                loadPins();
+            </script>
+
+            <br /><br />
+
+            <h3
+                class="md-typescale-display-small"
+                aria-label="Header for spotify embed with a music note icon and the text Here's my Spotify liked songs"
+            >
+                Here's my Spotify liked songs!
+                <span class="material-symbols-rounded icon-inline"
+                    >music_note</span
+                >
+            </h3>
+            <iframe
+                id="spotifyframe"
+                class="SpotifyContainer"
+                aria-label="A embed containing a spotify playlist"
+                src="https://open.spotify.com/embed/playlist/3MRHnXdiXISxRELvTFydgI?utm_source=generator"
+                width="100%"
+                height="352"
+                frameborder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+            >
+            </iframe>
+
+            <br /><br />
+
+            <md-elevated-button
+                type="button"
+                aria-label="A button to send me an e-mail with a mail letter icon and the text Send Me an E-Mail"
+                href="mailto:william@mail.weelam.ca"
+                >Send Me an E-Mail!
+                <span class="material-symbols-rounded icon-inline"
+                    >mail</span
+                ></md-elevated-button
+            >
+
+            <md-elevated-button
+                type="button"
+                href="https://github.com/Wdboyes13/Wdboyes13.github.io"
+                aria-label="A button to access source code for this website with a code folder icon and the text Here's this websites code!"
+                >Heres this websites code!
+                <span class="material-symbols-rounded icon-inline"
+                    >folder_code</span
+                ></md-elevated-button
+            >
+
+            <md-elevated-button
+                type="button"
+                href="/dlkeys/index.html"
+                aria-label="A button to access my GPG Public Keys with a house key icon and the text Get my public keys here"
+                >Get my public keys here
+                <span class="material-symbols-rounded icon-inline"
+                    >key_vertical</span
+                ></md-elevated-button
+            >
+
+            <md-elevated-button
+                type="button"
+                aria-label="A button to access website legal information with a balancing scale icon and the text Legal Information"
+                href="https://github.com/Wdboyes13/Weelam.ca/blob/main/LEGAL"
+                >Legal Information<span
+                    class="material-symbols-rounded icon-inline"
+                    >balance</span
+                ></md-elevated-button
+            >
+
+            <div class="BadgeContainer">
+                <img
+                    src="/anarchom.png"
+                    alt="Anarcho-Communist Flag"
+                    class="AnFlag"
+                />
+                <a href="https://weelam.ca/license/"
+                    ><img
+                        src="/gplv3-or-later.png"
+                        alt="Licensed under the GNU General Public License Version 3"
+                /></a>
+                <a href="https://itsmadeincanada.ca/"
+                    ><img
+                        width="140"
+                        height="40"
+                        src="https://img.pagecloud.com/foL9eoreq8MPi-WqWTzM3SM_W_o=/140x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png"
+                        alt="Badge with the words We made this in Canada, eh!"
+                        srcset="
+                            https://img.pagecloud.com/foL9eoreq8MPi-WqWTzM3SM_W_o=/140x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png 1x,
+                            https://img.pagecloud.com/MQapmIxv2Tc5MEaRJBavXtMb-EU=/280x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png 2x
+                        "
+                        loading="lazy"
+                /></a>
+                <img width="140" height="40" src="/lgbtq.svg" loading="lazy" />
+            </div>
+            <div class="money-addrs">
+                <h3 class="md-typescale-body-medium">
+                    My BTC Address (Native SegWit):
+                    bc1qrjaft3a6veves5q0083q6wk74qnhu3kc6fanyt
+                </h3>
+                <h3 class="md-typescale-body-medium">
+                    My ETH Address: 0x036fAEcEE0e875b9aE8D17e2A41f82Ace60C60CB
+                </h3>
+                <h3 class="md-typescale-body-medium">
+                    My Interac E-Transfer Address: william@mail.weelam.ca
+                </h3>
+            </div>
         </div>
-
-        <br><br>
-
-        <h3 class="md-typescale-display-small" aria-label="Header for spotify embed with a music note icon and the text Here's my Spotify liked songs">Here's my Spotify liked songs! <span 
-            class="material-symbols-rounded icon-inline">music_note</span></h3>
-        <iframe id="spotifyframe" class="SpotifyContainer"  aria-label="A embed containing a spotify playlist"
-                src="https://open.spotify.com/embed/playlist/3MRHnXdiXISxRELvTFydgI?utm_source=generator" 
-                width="100%" height="352" frameBorder="0" 
-                allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-        </iframe>
-
-        <br /><br />
-
-        <md-elevated-button type="button" aria-label="A button to send me an e-mail with a mail letter icon and the text Send Me an E-Mail"
-            href="mailto:william@mail.weelam.ca">Send Me an E-Mail! <span 
-                class="material-symbols-rounded icon-inline">mail</span></md-elevated-button>
-
-        <md-elevated-button type="button" 
-            href="https://github.com/Wdboyes13/Wdboyes13.github.io" aria-label="A button to access source code for this website with a code folder icon and the text Here's this websites code!">Heres this websites code! <span 
-                class="material-symbols-rounded icon-inline">folder_code</span></md-elevated-button>
-                
-        <md-elevated-button type="button"
-            href="/dlkeys/index.html" aria-label="A button to access my GPG Public Keys with a house key icon and the text Get my public keys here">Get my public keys here <span
-                class="material-symbols-rounded icon-inline">key_vertical</span></md-elevated-button>
-
-        <md-elevated-button type="button" aria-label="A button to access website legal information with a balancing scale icon and the text Legal Information"
-            href="https://github.com/Wdboyes13/Weelam.ca/blob/main/LEGAL">Legal Information<span
-                class="material-symbols-rounded icon-inline">balance</span></md-elevated-button>
-
-        <div class="BadgeContainer">
-            <img src="/anarchom.png" alt="Anarcho-Communist Flag" class="AnFlag" />
-            <a href="https://weelam.ca/license/"><img src="/gplv3-or-later.png" alt="Licensed under the GNU General Public License Version 3" /></a>
-            <a href="https://itsmadeincanada.ca/"><img width="140" height="40" src="https://img.pagecloud.com/foL9eoreq8MPi-WqWTzM3SM_W_o=/140x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png" alt="Badge with the words We made this in Canada, eh!" srcset="https://img.pagecloud.com/foL9eoreq8MPi-WqWTzM3SM_W_o=/140x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png 1x, https://img.pagecloud.com/MQapmIxv2Tc5MEaRJBavXtMb-EU=/280x0/filters:no_upscale()/made-in-canada-4225/images/button-made-in-canada-vintage2x.png 2x" loading="lazy" /></a>
-            <img width="140" height="40" src="/lgbtq.svg" loading="lazy" />
-        </div>
-        <div class="money-addrs">
-            <h3 class="md-typescale-body-medium">My BTC Address (Native SegWit): bc1qrjaft3a6veves5q0083q6wk74qnhu3kc6fanyt</h3>
-            <h3 class="md-typescale-body-medium">My ETH Address: 0x036fAEcEE0e875b9aE8D17e2A41f82Ace60C60CB</h3>
-            <h3 class="md-typescale-body-medium">My Interac E-Transfer Address: william@mail.weelam.ca</h3>
-        </div>
-    </div>
-</body>
+    </body>
 </html>
