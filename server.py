@@ -161,7 +161,7 @@ def convert_currency():
 def serve_dir(filename=None):
     if filename is None:
         filename = "index.html"
-    return send_from_directory("www", filename)
+    return send_from_directory("www", filename, 'index.html')
 
 
 if __name__ == "__main__":
