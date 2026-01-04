@@ -1,6 +1,7 @@
 import os
 
 import requests
+import flask
 from flask import (
     Flask,
     Response,
@@ -141,12 +142,19 @@ def convert_currency():
         return f"Unexpected error: {str(e)}", 500
 
 @app.route("/docs/<project>")
-@app.route("/docs/<project>/<filename>")
+@app.route("/docs/<project>/")
+@app.route("/docs/<project>/<path:filename>")
 def serve_docs(project, filename=None):
     if project == "pyaudiosynth":
-        if filename is not None:
-            return send_from_directory(
-        
+        docs_dir = os.path.abspath('../pysynth/docs/_build')
+
+        if filename is None:
+            # Serve index.html by default
+            filename = 'index.html'
+
+        return send_from_directory(docs_dir, filename)
+    else:
+        return flask.abort(404)
 
 from whitenoise import WhiteNoise
 app.wsgi_app = WhiteNoise(app.wsgi_app, root='www/', index_file='index.html')
