@@ -29,17 +29,6 @@ def inject_headers(response: Response):
 def devwordle():
     return redirect("https://devwordle.weelam.ca", code=301)
 
-
-@app.route("/github/profile")
-def github_profile():
-    return redirect("https://github.com/Wdboyes13", code=302)
-
-
-@app.route("/github/<path:reponame>")
-def github_repo(reponame):
-    return redirect("https://github.com/Wdboyes13/" + reponame, code=302)
-
-
 @app.route("/secret/")
 def secret():
     return redirect("https://youtu.be/dQw4w9WgXcQ", code=301)
@@ -142,14 +131,15 @@ def convert_currency():
         return f"Unexpected error: {str(e)}", 500
 
 @app.route("/docs/<project>")
+def redirect_docs(project):
+    return redirect(f"/docs/{project}/", code=301)
+
 @app.route("/docs/<project>/")
 @app.route("/docs/<project>/<path:filename>")
 def serve_docs(project, filename=None):
     if project == "pyaudiosynth":
         docs_dir = os.path.abspath('../pysynth/docs/_build/html')
-
         if filename is None:
-            # Serve index.html by default
             filename = 'index.html'
 
         return send_from_directory(docs_dir, filename)
