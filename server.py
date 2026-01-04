@@ -146,7 +146,7 @@ def convert_currency():
 @app.route("/docs/<project>/<path:filename>")
 def serve_docs(project, filename=None):
     if project == "pyaudiosynth":
-        docs_dir = os.path.abspath('../pysynth/docs/_build')
+        docs_dir = os.path.abspath('../pysynth/docs/_build/html')
 
         if filename is None:
             # Serve index.html by default
