@@ -12,21 +12,6 @@ from flask import (
 
 app = Flask(__name__)
 
-
-@app.before_request
-def forward_secure():
-    try:
-        if not request.is_secure and not app.debug:
-            forwarded_proto = request.headers.get("X-Forwarded-Proto", "")
-            if forwarded_proto != "https":
-                https_url = request.url.replace("http://", "https://", 1)
-                return redirect(https_url, code=301)
-        return None
-    except Exception as e:
-        app.logger.error(f"Error in before_request: {e}")
-        return None
-
-
 @app.after_request
 def inject_headers(response: Response):
     response.headers["X-SuperSecret"] = "https://youtu.be/dQw4w9WgXcQ"
@@ -155,16 +140,17 @@ def convert_currency():
     except Exception as e:
         return f"Unexpected error: {str(e)}", 500
 
+@app.route("/docs/<project>")
+@app.route("/docs/<project>/<filename>")
+def serve_docs(project, filename=None):
+    if project == "pyaudiosynth":
+        if filename is not None:
+            return send_from_directory(
+        
 
-@app.route("/")
-@app.route("/<path:filename>")
-def serve_dir(filename=None):
-    if filename is None:
-        filename = "index.html"
-    return send_from_directory("www", filename, 'index.html')
-
+from whitenoise import WhiteNoise
+app.wsgi_app = WhiteNoise(app.wsgi_app, root='www/', index_file='index.html')
 
 if __name__ == "__main__":
     from waitress import serve
-
     serve(app, host="0.0.0.0", port=8000)

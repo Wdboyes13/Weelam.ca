@@ -90,31 +90,6 @@
 
             <h3
                 class="md-typescale-display-small"
-                aria-label="Header for projects container with the text Heres some of my current projects"
-            >
-                Heres some of my current projects!
-            </h3>
-            <div id="projects"></div>
-
-            <script>
-                async function loadPins() {
-                    try {
-                        const response = await fetch("/pins");
-                        const html = await response.text();
-                        document.getElementById("projects").innerHTML = html;
-                    } catch (error) {
-                        console.error("Failed to load pins:", error);
-                        document.getElementById("projects").innerHTML =
-                            "<p>Failed to load projects</p>";
-                    }
-                }
-                loadPins();
-            </script>
-
-            <br /><br />
-
-            <h3
-                class="md-typescale-display-small"
                 aria-label="Header for spotify embed with a music note icon and the text Here's my Spotify liked songs"
             >
                 Here's my Spotify liked songs!
